@@ -50,7 +50,8 @@ ui <- dashboardPage(skin = "blue",
                                     )#end of p
                                   ),#end of fluidPage
                         tabItems(
-                            tabItem(
+ # took this next tab from a different example - it's not showing up yet
+                                                       tabItem(
                                 tabName = "home_tab",
                                 HTML('<iframe width="560" height="315" src="https://www.youtube.com/watch?v=c9QM87Jl7k4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'),
                                 h3("About this app:"),
@@ -96,7 +97,13 @@ server <- function(input, output) {
 
 # ---------------------------------------------------------------------------
 # Create a reactive plot (this section doesn't work right now)
-
+# running this code causes an error and won't allow the app to run- is it because we don't have the radio buttons like on the earlier version?
+# output$fish_plot <- renderPlot({
+#
+#     ggplot(data = fish_select(), aes(x = year, y = catch_sum)) +
+#         geom_point(color = input$pt_color, size = 5)
+#
+# })
 
 # ---------------------------------------------------------------------------
 
@@ -107,6 +114,10 @@ shinyApp(ui = ui, server = server)
 
 
 
+
+
+
+# earlier version
 
 
 fluidPage(theme = my_theme,
