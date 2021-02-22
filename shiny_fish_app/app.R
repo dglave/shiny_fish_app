@@ -35,7 +35,7 @@ ui <- fluidPage(theme = my_theme,
         sidebarPanel("put my widgets here",
                      radioButtons(inputId = "fishing_entity_name",
                                   label = "Choose Entity Name (country)",
-                                  choices = c("Brazil","Japan","Venezuela!" = "Venezuela") # This is my first widget for penguins species
+                                  choices = c("Brazil","Japan","Venezuela!" = "Venezuela"), # This is my first widget for penguins species
                      ),
                      selectInput(inputId = "pt_color",
                                  label = "Select point color",
@@ -54,7 +54,7 @@ ui <- fluidPage(theme = my_theme,
 
         )
     ),
-)
+
 
 # Building the server:
 server <- function(input, output) {
