@@ -22,6 +22,11 @@ my_theme <- bs_theme(
 )
 
 
+### I'm playing with creating an "about" tab. I'm unsure if thise goes before the ui. I'll find out
+
+
+
+
 
 # Creating the user interface
 ui <- fluidPage(theme = my_theme,
@@ -48,7 +53,7 @@ ui <- fluidPage(theme = my_theme,
                   fluidRow(column(3, verbatimTextOutput("value")))
 
         )
-    )
+    ),
 )
 
 # Building the server:
