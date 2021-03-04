@@ -54,7 +54,7 @@ ui <- fluidPage(theme = my_theme,
 
         )
     ),
-
+)
 
 # Building the server:
 server <- function(input, output) {
